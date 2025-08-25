@@ -1,27 +1,19 @@
-import {
-  app,
-  BrowserWindow
-} from "electron";
-import {
-  join,
-  dirname
-} from "path";
-import {
-  fileURLToPath
-} from "url";
+import { app, BrowserWindow } from "electron";
+import { join, dirname } from "path";
+import { fileURLToPath } from "url";
 
-const __filename = fileURLToPath(
-  import.meta.url);
+const __filename = fileURLToPath(import.meta.url);
 const __dirname = dirname(__filename);
 
-if (process.env.NODE_ENV !== "production") {
-  const electronReload = require("electron-reload");
-  electronReload(__dirname, {
-    electron: join(__dirname, "../node_modules/.bin/electron")
+if (process.env.NODE_ENV === "development") {
+  import("electron-reload").then(({ default: electronReload }) => {
+    electronReload(__dirname, {
+      electron: join(__dirname, "../node_modules/.bin/electron")
+    });
   });
 }
 
-let mainWindow: BrowserWindow | null = null;
+let mainWindow = null;
 
 function createWindow() {
   mainWindow = new BrowserWindow({
