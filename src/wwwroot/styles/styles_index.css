@@ -35,6 +35,8 @@ main {
 
 nav {
     display: flex;
+    height: fit-content;
+    width: 100%;
 }
 
 .title-container {
@@ -97,4 +99,22 @@ nav {
 
 .toolbar button:active {
     filter: brightness(1.2) blur(1px);
+}
+
+.widget-editor {
+    width: 100%;
+    height: 90%;
+}
+
+.clock-preview {
+    display: grid;
+    place-items: center;
+    width: 100%;
+    height: 50%;
+}
+
+.clock {
+    font-size: 8em;
+    font-weight: bold;
+    font-family: 'Kelsi';
 }
