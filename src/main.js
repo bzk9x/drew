@@ -1,4 +1,4 @@
-import { app, BrowserWindow } from "electron";
+import { app, BrowserWindow, ipcMain } from "electron";
 import { join, dirname } from "path";
 import { fileURLToPath } from "url";
 
@@ -15,7 +15,11 @@ function createWindow() {
     maximizable: false,
     frame: false,
     webPreferences: {
-      preload: join(__dirname, "preload.js")
+      preload: join(__dirname, "preload.js"),
+      nodeIntegration: false,
+      contextIsolation: true,
+      enableRemoteModule: false,
+      webSecurity: true
     }
   });
 
@@ -26,6 +30,33 @@ function createWindow() {
   });
 }
 
+ipcMain.handle('window-minimize', () => {
+  if (mainWindow && !mainWindow.isDestroyed()) {
+    mainWindow.minimize();
+    return { success: true };
+  }
+  return { success: false, error: 'Window not available' };
+});
+
+ipcMain.handle('window-close', () => {
+  if (mainWindow && !mainWindow.isDestroyed()) {
+    mainWindow.close();
+    return { success: true };
+  }
+  return { success: false, error: 'Window not available' };
+});
+
+ipcMain.handle('window-get-state', () => {
+  if (mainWindow && !mainWindow.isDestroyed()) {
+    return {
+      isMinimized: mainWindow.isMinimized(),
+      isMaximized: mainWindow.isMaximized(),
+      isFocused: mainWindow.isFocused()
+    };
+  }
+  return null;
+});
+
 app.on("ready", createWindow);
 
 app.on("window-all-closed", () => {
@@ -34,4 +65,10 @@ app.on("window-all-closed", () => {
 
 app.on("activate", () => {
   if (mainWindow === null) createWindow();
+});
+
+app.on('before-quit', () => {
+  ipcMain.removeAllListeners('window-minimize');
+  ipcMain.removeAllListeners('window-close');
+  ipcMain.removeAllListeners('window-get-state');
 });
