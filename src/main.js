@@ -19,7 +19,7 @@ function createWindow() {
     }
   });
 
-  mainWindow.loadFile(join(__dirname, "wwwroot/res/ui/layout_index.html"));
+  mainWindow.loadFile(join(__dirname, "wwwroot/ui/layout_index.html"));
 
   mainWindow.on("closed", () => {
     mainWindow = null;
