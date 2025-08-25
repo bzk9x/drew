@@ -1,4 +1,69 @@
 @font-face {
-    font-family: 'Kelsi';
-    src: url(../../fonts/sunday_flicker.ttf);
+    font-family: 'Bahena';
+    src: url(../../fonts/bahena.ttf);
+}
+
+@font-face {
+    font-family: 'Death Markers';
+    src: url(../../fonts/death_markers.ttf);
+}
+
+@font-face {
+    font-family: 'Ghouliescript Drip';
+    src: url(../../fonts/ghouliescript_drip.ttf);
+}
+
+@font-face {
+    font-family: 'Gunko Street';
+    src: url(../../fonts/gunko_street.ttf);
+}
+
+@font-face {
+    font-family: 'High Beasty';
+    src: url(../../fonts/high_beasty.ttf);
+}
+
+@font-face {
+    font-family: 'Monetera Signatura';
+    src: url(../../fonts/monetera_signatura.ttf);
+}
+
+@font-face {
+    font-family: 'Nexmod';
+    src: url(../../fonts/nexmod.ttf);
+}
+
+@font-face {
+    font-family: 'Nexmod Regular';
+    src: url(../../fonts/nexmod_regular.ttf);
+}
+
+@font-face {
+    font-family: 'Nunito';
+    src: url(../../fonts/nunito.ttf);
+}
+
+@font-face {
+    font-family: 'Oups';
+    src: url(../../fonts/oups.ttf);
+}
+
+@font-face {
+    font-family: 'Shadow Anthem';
+    src: url(../../fonts/shadow_anthem.ttf);
+}
+
+@font-face {
+    font-family: 'Stones Crush';
+    src: url(../../fonts/stones_crush.ttf);
+}
+
+@font-face {
+    font-family: 'Yellow White Opozzum';
+    src: url(../../fonts/yellow_white_opozzum.ttf);
+}
+
+@font-face {
+    font-family: 'Zombox Slime';
+    src: url(../../fonts/zombox_slime.ttf);
 }

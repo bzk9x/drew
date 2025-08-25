@@ -1,0 +1,58 @@
+[
+  {
+    "name": "Bahena",
+    "font": "bahena.ttf"
+  },
+  {
+    "name": "Death Markers",
+    "font": "death_markers.ttf"
+  },
+  {
+    "name": "Ghouliescript Drip",
+    "font": "ghouliescript_drip.ttf"
+  },
+  {
+    "name": "Gunko Street",
+    "font": "gunko_street.ttf"
+  },
+  {
+    "name": "High Beasty",
+    "font": "high_beasty.ttf"
+  },
+  {
+    "name": "Monetera Signatura",
+    "font": "monetera_signatura.ttf"
+  },
+  {
+    "name": "Nexmod",
+    "font": "nexmod.ttf"
+  },
+  {
+    "name": "Nexmod Regular",
+    "font": "nexmod_regular.ttf"
+  },
+  {
+    "name": "Nunito",
+    "font": "nunito.ttf"
+  },
+  {
+    "name": "Oups",
+    "font": "oups.ttf"
+  },
+  {
+    "name": "Shadow Anthem",
+    "font": "shadow_anthem.ttf"
+  },
+  {
+    "name": "Stones Crush",
+    "font": "stones_crush.ttf"
+  },
+  {
+    "name": "Yellow White Opozzum",
+    "font": "yellow_white_opozzum.ttf"
+  },
+  {
+    "name": "Zombox Slime",
+    "font": "zombox_slime.ttf"
+  }
+]
