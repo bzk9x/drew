@@ -1,0 +1,100 @@
+html, body {
+    width: 100%;
+    height: 100%;
+    padding: 0;
+    margin: 0;
+    background-color: black;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    color: #fffffff5;
+    user-select: none;
+}
+
+body {
+    position: relative;
+}
+
+.bg {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+
+.bg img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+main {
+    width: 100%;
+    height: 100%;
+    background-color: #1e1e1e6f;
+    backdrop-filter: blur(50px);
+    position: absolute;
+}
+
+nav {
+    display: flex;
+}
+
+.title-container {
+    padding: 4px 0 4px 8px;
+}
+
+.drag-area {
+    flex: 1;
+    app-region: drag;
+}
+
+.win-controls {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 4px 8px 4px 0;
+    gap: 8px;
+}
+
+.win-control {
+    width: 18px;
+    height: 18px;
+    background-color: #4e4e4e;
+    border-radius: 50%;
+    transition: 0.2s ease;
+}
+
+.win-control.close {
+    background-color: #ff7575;
+}
+
+.win-control:hover {
+    filter: brightness(1.2);
+}
+
+.toolbar {
+    padding: 4px 8px 4px 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.toolbar button {
+    border: none;
+    background-color: #4e4e4e86;
+    backdrop-filter: blur(50px);
+    border: none;
+    padding: 4px 8px;
+    border-radius: 5px;
+    color: #fffffff5;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    font-size: 0.7em;
+    cursor: pointer;
+    transition: 0.2s ease;
+}
+
+.toolbar button:hover {
+    filter: brightness(1.2);
+}
+
+.toolbar button:active {
+    filter: brightness(1.2) blur(1px);
+}

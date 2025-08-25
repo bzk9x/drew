@@ -5,20 +5,15 @@ import { fileURLToPath } from "url";
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = dirname(__filename);
 
-if (process.env.NODE_ENV === "development") {
-  import("electron-reload").then(({ default: electronReload }) => {
-    electronReload(__dirname, {
-      electron: join(__dirname, "../node_modules/.bin/electron")
-    });
-  });
-}
-
 let mainWindow = null;
 
 function createWindow() {
   mainWindow = new BrowserWindow({
     width: 800,
     height: 600,
+    resizable: false,
+    maximizable: false,
+    frame: false,
     webPreferences: {
       preload: join(__dirname, "preload.js")
     }

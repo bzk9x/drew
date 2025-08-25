@@ -2,8 +2,9 @@
   "name": "drew",
   "version": "1.0.0",
   "type": "module",
+  "main": "src/main.js",
   "scripts": {
-    "start": "nodemon --watch src --ext js,html,css --exec electron src/main.js"
+    "start": "electron ."
   },
   "devDependencies": {
     "cross-env": "^7.0.3",
